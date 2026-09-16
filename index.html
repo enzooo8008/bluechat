@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue Chat 💙</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="nameModal" class="modal">
+    <div class="modal-card">
+      <div class="heart">💙</div>
+      <h1>Blue Chat</h1>
+      <p>Choose your name to enter the chat.</p>
+      <input id="nameInput" maxlength="30" placeholder="Your name" autocomplete="off" />
+      <button id="enterBtn">Enter Chat</button>
+    </div>
+  </div>
+
+  <main class="app">
+    <header class="topbar">
+      <div class="avatar">💙</div>
+      <div>
+        <h2>Our Chat</h2>
+        <span id="status"><i></i> Online</span>
+      </div>
+      <div class="header-heart">♡</div>
+    </header>
+
+    <section id="messages" class="messages"></section>
+
+    <div id="typing" class="typing"></div>
+
+    <form id="messageForm" class="composer">
+      <input id="messageInput" maxlength="1000" placeholder="Write a message..." autocomplete="off" />
+      <button aria-label="Send message">➤</button>
+    </form>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
