@@ -31,7 +31,7 @@ function saveMessages(messages) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(messages.slice(-500), null, 2));
 }
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 io.on("connection", (socket) => {
   socket.emit("chat history", loadMessages());
